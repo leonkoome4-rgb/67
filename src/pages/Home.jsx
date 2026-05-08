@@ -1,10 +1,8 @@
-
-
-export default Home
 import { useState } from "react"
 import projectsData from "../data/projects"
 import ProjectList from "../components/ProjectList"
-import DashboardControls from "../components/DashboardControls"
+import SearchBar from "../components/SearchBar"
+import ProjectForm from "../components/ProjectForm"
 
 function Home() {
   const [projects, setProjects] = useState(projectsData)
@@ -14,20 +12,18 @@ function Home() {
     setProjects([...projects, newProject])
   }
 
-  const filtered = projects.filter((p) =>
+  const filtered = projects.filter(p =>
     p.title.toLowerCase().includes(search.toLowerCase())
   )
 
   return (
-    <div className="home">
+    <div className="container">
 
-      <h1 className="title">My Projects</h1>
+      <h1 className="title">My Portfolio</h1>
 
-      <DashboardControls
-        search={search}
-        setSearch={setSearch}
-        addProject={addProject}
-      />
+      <SearchBar search={search} setSearch={setSearch} />
+
+      <ProjectForm addProject={addProject} />
 
       <ProjectList projects={filtered} />
 
@@ -35,3 +31,4 @@ function Home() {
   )
 }
 
+export default Home

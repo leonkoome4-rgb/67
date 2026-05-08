@@ -1,19 +1,12 @@
 function SearchBar({ search, setSearch }) {
   return (
-    <div className="search-card">
-      
-      <h3 className="search-title">
-        Search Projects
-      </h3>
-
+    <div className="card">
       <input
-        className="search-input"
-        type="text"
-        placeholder="Search..."
+        className="input"
+        placeholder="Search projects..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-
     </div>
   )
 }

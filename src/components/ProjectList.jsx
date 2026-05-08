@@ -1,16 +1,13 @@
-import ProjectCard from "./projectcard";
+import ProjectCard from "./ProjectCard"
 
 function ProjectList({ projects }) {
   return (
     <div className="grid">
-      {projects.map((project) => (
-        <ProjectCard
-          key={project.id}
-          project={project}
-        />
+      {projects.map(p => (
+        <ProjectCard key={p.id} project={p} />
       ))}
     </div>
   )
 }
 
-export default ProjectList ;
+export default ProjectList

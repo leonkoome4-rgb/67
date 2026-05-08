@@ -2,16 +2,16 @@ const projects = [
   {
     id: 1,
     title: "Weather App",
-    description: "A weather forecast application.",
+    description: "Live weather updates using API",
     image: "https://picsum.photos/300/200",
-    technologies: "React, CSS"
+    tech: "React"
   },
   {
     id: 2,
-    title: "Movie Finder",
-    description: "Search for movies using an API.",
+    title: "Todo App",
+    description: "Task manager app",
     image: "https://picsum.photos/300/201",
-    technologies: "React, API"
+    tech: "React"
   }
 ]
 

@@ -5,24 +5,21 @@ function ProjectDetails() {
   const { id } = useParams()
   const navigate = useNavigate()
 
-  const project = projects.find(
-    (p) => p.id === Number(id)
-  )
+  const project = projects.find(p => p.id === Number(id))
 
-  if (!project) {
-    return <h2>Project not found</h2>
-  }
+  if (!project) return <h2>Not found</h2>
 
   return (
-    <div className="details-container">
+    <div className="container">
+
       <button onClick={() => navigate("/")}>
-        ⬅ Back Home
+        ⬅ Back
       </button>
 
       <h1>{project.title}</h1>
-      <img src={project.image} alt={project.title} />
+      <img src={project.image} />
       <p>{project.description}</p>
-      <h3>{project.technologies}</h3>
+
     </div>
   )
 }
