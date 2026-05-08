@@ -3,7 +3,7 @@ import projectsData from "../data/projects"
 import ProjectList from "../components/ProjectList"
 import SearchBar from "../components/SearchBar"
 import ProjectForm from "../components/ProjectForm"
-import "./styles/app.css";
+
 function Home() {
   const [projects, setProjects] = useState(projectsData)
   const [search, setSearch] = useState("")
